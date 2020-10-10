@@ -1,7 +1,13 @@
 import React from "react";
-
+import { loginUrl } from "./spotify";
+import "./Login.css";
 function Login() {
-  return <div></div>;
+  return (
+    <div className="login">
+      <img src={require("./img/spotify_logo_black.png")} alt="" />
+      <a href={loginUrl}>LOGIN WITH SPOTIFY</a>
+    </div>
+  );
 }
 
 export default Login;

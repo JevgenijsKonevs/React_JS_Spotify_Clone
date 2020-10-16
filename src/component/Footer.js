@@ -7,7 +7,7 @@ import RepeatIcon from "@material-ui/icons/Repeat";
 import { Grid, Slider } from "@material-ui/core";
 import PlaylistPlayIcon from "@material-ui/icons/PlaylistPlay";
 import VolumeDownIcon from "@material-ui/icons/VolumeDown";
-import "./Footer.css";
+import "../css/Footer.css";
 function Footer() {
   return (
     <div className="footer">

@@ -9,9 +9,8 @@ import "./App.css";
 const spotify = new SpotifyWebApi();
 
 function App() {
-  const [token, setToken] = useState(null);
-  // {user} is equal to dataLayer.user
-  const [{ user }, dispatch] = useDataLayerValue();
+  // {user} is equal to dataLayer.user (getting user prop from the data layer component)
+  const [{ user, token }, dispatch] = useDataLayerValue();
   // run code based on a give condition
   useEffect(() => {
     // assign access token to the variable hash
@@ -22,7 +21,11 @@ function App() {
     const _token = hash.access_token;
     // store the token inside of the state
     if (_token) {
-      setToken(_token);
+      dispatch({
+        type: "SET_TOKEN",
+        token: _token,
+      });
+
       // "dispatch" means that once the getMe() f-on got the user it will dispatch it to the data layer, where all the songs, playlists are located,
       //avoiding passing it throughout the components
       spotify.setAccessToken(_token);
@@ -34,7 +37,12 @@ function App() {
       });
     }
   }, []);
-  return <div className="app">{token ? <Player /> : <Login />}</div>;
+
+  return (
+    <div className="app">
+      {token ? <Player spotify={spotify} /> : <Login />}
+    </div>
+  );
 }
 
 export default App;

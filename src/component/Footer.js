@@ -7,12 +7,18 @@ import RepeatIcon from "@material-ui/icons/Repeat";
 import { Grid, Slider } from "@material-ui/core";
 import PlaylistPlayIcon from "@material-ui/icons/PlaylistPlay";
 import VolumeDownIcon from "@material-ui/icons/VolumeDown";
+import { useDataLayerValue } from "../data/DataLayer";
 import "../css/Footer.scss";
 function Footer() {
+  const [{ discover_weekly }, dispatch] = useDataLayerValue();
   return (
     <div className="footer">
       <div className="footer__left">
-        <img className="footer__albumLogo" src="" alt="" />
+        <img
+          className="footer__albumLogo"
+          src={discover_weekly?.images[0].url}
+          alt=""
+        />
         <div className="footer__songInfo"></div>
       </div>
       <div className="footer__center">

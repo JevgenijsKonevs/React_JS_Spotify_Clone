@@ -5,7 +5,7 @@ import PlayIcon from "@material-ui/icons/PlayCircleOutline";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import MoreIcon from "@material-ui/icons/MoreHoriz";
 import SongRow from "./SongRow";
-import "../css/Body.css";
+import "../css/Body.scss";
 function Body({ spotify }) {
   const [{ discover_weekly }, dispatch] = useDataLayerValue();
   return (

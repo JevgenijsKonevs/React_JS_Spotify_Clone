@@ -1,7 +1,7 @@
 #### ⚠️ This project is in progress ⚠️
 
 ## Preview
-![login](https://user-images.githubusercontent.com/55871427/96376922-6e61e300-118a-11eb-81c5-a711e6ce0ba3.JPG) </br>
+
 ![login_2](https://user-images.githubusercontent.com/55871427/96376916-65711180-118a-11eb-85c7-e54d27e17956.JPG) </br>
 ![login_3](https://user-images.githubusercontent.com/55871427/96376915-643fe480-118a-11eb-8ef4-6648840a9721.JPG) </br>
 

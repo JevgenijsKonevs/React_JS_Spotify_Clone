@@ -6,9 +6,9 @@
 ![login_3](https://user-images.githubusercontent.com/55871427/96376915-643fe480-118a-11eb-8ef4-6648840a9721.JPG) </br>
 
 ![main](https://user-images.githubusercontent.com/55871427/96376914-62762100-118a-11eb-86a3-1639dad27da7.JPG) </br>
+## Demo
 
-
-
+https://spotify-clone-1.netlify.app/
 
 ## Available Scripts
 

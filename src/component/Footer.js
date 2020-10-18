@@ -19,7 +19,7 @@ function Footer() {
           src={discover_weekly?.images[0].url}
           alt=""
         />
-        <div className="footer__songInfo"></div>
+        <div className="footer__songInfo">Rock</div>
       </div>
       <div className="footer__center">
         <ShuffleIcon className="footer__green" />

@@ -8,7 +8,7 @@ import "../css/Sidebar.scss";
 function Sidebar() {
   // {playlists} is equal to dataLayer.playlists (getting playlists prop from the data layer component)
   const [{ playlists }, dispatch] = useDataLayerValue();
-  console.log(playlists);
+
   return (
     <div className="sidebar">
       <img
@@ -25,10 +25,9 @@ function Sidebar() {
 
       {/* not working ?> */}
       {playlists?.items?.map((playlist) => (
-        <SidebarOption option={playlist.name} />
+        <SidebarOption title={playlist.name} />
       ))}
-
-      <SidebarOption title="hip-hop" />
+      <SidebarOption title="ROCK_PLAYLIST" />
     </div>
   );
 }

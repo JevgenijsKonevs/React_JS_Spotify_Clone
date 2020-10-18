@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Login from "./component/Login";
 import { getTokenFromUrl } from "./data/spotify";
 import SpotifyWebApi from "spotify-web-api-js";
@@ -15,6 +15,8 @@ function App() {
   useEffect(() => {
     // assign access token to the variable hash
     const hash = getTokenFromUrl();
+    // get access token
+    //console.log(getTokenFromUrl());
     // hide the access token from the browser url
     window.location.hash = "";
     // assign access token to the variable _token
@@ -35,14 +37,19 @@ function App() {
           user: user,
         });
       });
-
+      // get users username. The function will return promise
+      // console.log(spotify.getMe());
       spotify.getUserPlaylists().then((playlists) => {
         dispatch({
-          type: "SET_PLAYLIST",
+          type: "SET_PLAYLISTS",
           playlists: playlists,
         });
       });
-      spotify.getPlaylist("2wVHAqMObGv0eL9itb9neW").then((response) =>
+
+      // "2wVHAqMObGv0eL9itb9neW" is the value, which is obtained from official Spotify Web Player url
+      // for example : https://open.spotify.com/playlist/2wVHAqMObGv0eL9itb9neW
+
+      spotify.getPlaylist("1NuaHRy9M0PeDtljDtGfiL").then((response) =>
         dispatch({
           type: "SET_DISCOVER_WEEKLY",
           discover_weekly: response,

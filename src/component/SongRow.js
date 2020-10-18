@@ -1,8 +1,11 @@
 import React from "react";
+import AudiotrackIcon from "@material-ui/icons/Audiotrack";
 import "../css/SongRow.scss";
 function SongRow({ track }) {
   return (
     <div className="songRow">
+      <AudiotrackIcon />
+
       <img className="songRow__album" src={track.album.images[0].url} alt="" />
       <div className="songRow__info">
         <h1>{track.name}</h1>
